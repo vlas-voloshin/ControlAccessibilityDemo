@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-In-jgC">
+                                <rect key="frame" x="270" y="221" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXk-v3-pkk" customClass="MyControl">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OJu-WM-fdo"/>
+                                    <constraint firstAttribute="width" constant="100" id="qbk-AC-sIO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="myControlTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1AG-sE-ApV"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility Label:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXc-Ai-emO">
+                                <rect key="frame" x="227" y="542" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-l5-kXZ">
+                                <rect key="frame" x="160" y="571" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Dgt-rD-mn1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="rXc-Ai-emO" secondAttribute="centerX" id="Gc4-EK-45j"/>
+                            <constraint firstItem="KU6-l5-kXZ" firstAttribute="top" secondItem="rXc-Ai-emO" secondAttribute="bottom" constant="8" symbolic="YES" id="N6y-9e-Ams"/>
+                            <constraint firstAttribute="centerX" secondItem="KXk-v3-pkk" secondAttribute="centerX" id="OLb-6T-kdm"/>
+                            <constraint firstItem="yQv-In-jgC" firstAttribute="centerX" secondItem="KXk-v3-pkk" secondAttribute="centerX" id="RU5-fQ-BRC"/>
+                            <constraint firstItem="KXk-v3-pkk" firstAttribute="top" secondItem="yQv-In-jgC" secondAttribute="bottom" constant="8" symbolic="YES" id="YFi-2w-sUR"/>
+                            <constraint firstAttribute="centerY" secondItem="KXk-v3-pkk" secondAttribute="centerY" id="fRs-DY-IwK"/>
+                            <constraint firstAttribute="centerX" secondItem="KU6-l5-kXZ" secondAttribute="centerX" id="gxl-4I-g2K"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KU6-l5-kXZ" secondAttribute="bottom" constant="8" symbolic="YES" id="m7a-JD-kOr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessibilityLabelLabel" destination="KU6-l5-kXZ" id="QKU-8I-25W"/>
+                        <outlet property="myControl" destination="KXk-v3-pkk" id="l5f-p0-QzP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
