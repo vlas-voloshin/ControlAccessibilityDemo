@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     
+    self.myControl.isAccessibilityElement = YES;
+    
     self.accessibilityLabelLabel.text = self.myControl.accessibilityLabel;
 }
 

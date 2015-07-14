@@ -33,4 +33,4 @@ Use Accessibility Inspector to check that your app correctly implements Accessib
 Caveat!
 -------
 
-When running this demo app and checking your own apps, make sure to enable Accessibility Inspector _before_ launching your app. Seems like different Simulators enable default Accessibility behaviors inconsistently (even as simple as `accessibilityLabel` of `UILabel` taken from its `text`) – they probably don't even load Accessibility bundles in some cases.
+When running this demo app and checking your own apps, make sure to enable Accessibility Inspector on iOS Simulator (or VoiceOver on iOS device) _before_ launching your app. Seems like default Accessibility behaviors (even as simple as `accessibilityLabel` of `UILabel` taken from its `text`) are only enabled when Accessibility is actually used – otherwise iOS probably doesn't even load Accessibility bundles.
